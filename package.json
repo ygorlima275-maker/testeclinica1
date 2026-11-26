@@ -1,0 +1,21 @@
+{
+  "name": "hemo-vet-clinica-escola",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Clínica Escola UNINASSAU · Gestão Clínica Veterinária",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node --check server.js && node --check backend/app.js && node --check backend/routes/collections.js && node --check backend/routes/appointments.js",
+    "lint": "node --check server.js && node --check backend/app.js && node --check backend/config/supabase.js && node --check backend/middleware/auth.js && node --check backend/services/store.js && node --check backend/routes/index.js && node --check backend/routes/auth.js && node --check backend/routes/collections.js && node --check backend/routes/appointments.js && node --check backend/routes/animals.js && node --check backend/routes/clinics.js && node --check backend/routes/clinicContacts.js && node --check backend/routes/health.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0"
+  }
+}
